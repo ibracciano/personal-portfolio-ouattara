@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         body: ["Poppins", "sans-serif"],
         heading: ["Rubik", "sans-serif"],
+      },
+      colors: {
+
       }
     },
   },
