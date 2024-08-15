@@ -18,7 +18,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 
 const Home = () => {
   const [typeEffect] = useTypewriter({
-    words: ["Développeur Web", "Développeur React", "Développeur Frontend"],
+    words: ["Développeur Web", "Développeur React", "Développeur Front", "Dévéloppeur Back", "Développeur JS"],
     loop: true,
     cursor: <Cursor className="text-white" />,
     delay: 1000,
@@ -82,16 +82,12 @@ const Home = () => {
       <div className="flex flex-col-reverse items-center gap-10 lg:flex-row">
         {/* left */}
         <div className="lg:w-[50%]">
-          <h1 className="mb-5 text-center text-transparent lg:text-start font-poppins VioletToIndigo bg-clip-text">
-            Je suis <span>{typeEffect}</span>
+          <h1 className="text-center text-transparent mb-7 lg:text-start font-poppins VioletToIndigo bg-clip-text">
+            Je suis Ouattara Ibrahim Yacouba <span className="text-transparent OrangeToPink bg-clip-text">{typeEffect}</span>
             <Cursor />
           </h1>
-          <hr />
-          <h2 className="flex items-center justify-center gap-5 my-5 lg:justify-start">
-            OUATTARA IBRAHIM YACOUBA
-          </h2>
-          <hr />
-          <div className="grid justify-between grid-cols-3 mt-5 gap-y-5 lg:gap-3 lg:grid-cols-4">
+
+          <div className="grid justify-between grid-cols-3 p-5 mt-5 border-t-4 border-b-4 border-orange-600 gap-y-5 lg:gap-3 lg:grid-cols-4 Darkness">
             {languages.map((language, index) => (
               <div key={index} className="flex items-center gap-2">
                 <p>{language.icon}</p>
@@ -102,7 +98,7 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="flex justify-between gap-12 py-3 mt-10 border-t-4 border-b-4 border-cyan-600 Darkness">
+          <div className="flex justify-between gap-12 p-5 mt-10 border-t-4 border-b-4 border-cyan-600 Darkness">
             <div className="">
               <p className="text-6xl font-bold text-transparent RedToOrange bg-clip-text">
                 1+
@@ -154,7 +150,7 @@ const Home = () => {
               <img
                 src={Rac}
                 alt="gomycode Logo"
-                className="w-[100px] rounded-lg"
+                className="w-[80px] h-[80px] lg:h-[100px] lg:w-[100px] rounded-lg"
               />
               <div>
                 <h2 className="text-transparent VioletToIndigo bg-clip-text">
@@ -173,7 +169,7 @@ const Home = () => {
               <img
                 src={Gomycode}
                 alt="gomycode Logo"
-                className="w-[100px] rounded-lg"
+                className="w-[80px] h-[80px] lg:h-[100px] lg:w-[100px] rounded-lg"
               />
               <div>
                 <h2 className="text-transparent VioletToIndigo bg-clip-text">
@@ -190,9 +186,28 @@ const Home = () => {
           <div>
             <div className="flex items-center gap-3">
               <img
+                src={Gomycode}
+                alt="gomycode Logo"
+                className="w-[80px] h-[80px] lg:h-[100px] lg:w-[100px] rounded-lg"
+              />
+              <div>
+                <h2 className="text-transparent VioletToIndigo bg-clip-text">
+                  Certifié Marketing Digital
+                </h2>
+                <span className="text-transparent VioletToIndigo bg-clip-text">
+                  en 2022
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* form 4 */}
+          <div>
+            <div className="flex items-center gap-3">
+              <img
                 src={Academy}
                 alt="gomycode Logo"
-                className="w-[100px] rounded-lg"
+                className="w-[80px] h-[80px] lg:h-[100px] lg:w-[100px] rounded-lg"
               />
               <div>
                 <h2 className="text-transparent VioletToIndigo bg-clip-text">

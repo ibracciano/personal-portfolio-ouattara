@@ -10,7 +10,7 @@ const UserLayout = () => {
       <div className="w-full lg:w-[90%] min-h-screen Darkness text-white rounded-lg">
         <Outlet />
       </div>
-      <div className="">
+      <div>
         <Header />
       </div>
     </div>

@@ -9,9 +9,9 @@ const Header = () => {
   const icons = [
     { path: "/", icon: <MdAddHome size={30} />, nom: "Home" },
     {
-      path: "/portfolio",
+      path: "/resume",
       icon: <BsPassportFill size={30} />,
-      nom: "Portfolio",
+      nom: "Resume",
     },
     { path: "/projects", icon: <RiProjectorFill size={30} />, nom: "Projects" },
     { path: "/blog", icon: <FaBlogger size={30} />, nom: "Blog" },
@@ -19,7 +19,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="md:w-[5%] md:mt-10 fixed bottom-0 w-full  shadow shadow-white md:right-[95px] Darkness z-50 text-white md:flex justify-center rounded-md">
+    <header className="md:w-[5%] md:mt-10 fixed bottom-0 w-full border-2 border-cyan-500 lg:border-none md:right-[95px] Darkness z-50 text-white md:flex justify-center rounded-md">
       <nav>
         <ul className="flex justify-center px-2 py-5 md:gap-5 md:flex-col">
           {icons.map((icon, index) => (

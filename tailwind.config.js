@@ -10,8 +10,8 @@ export default {
         body: ["Poppins", "sans-serif"],
         heading: ["Rubik", "sans-serif"],
       },
-      colors: {
-
+      backgroundImage: {
+        'pattern': "url('./src/assets/effect.jpg')"
       }
     },
   },

@@ -19,6 +19,9 @@
   .Darkness {
     @apply bg-gradient-to-r from-slate-950 to-slate-800;
   }
+  .Dark {
+    @apply bg-gradient-to-r from-neutral-800 to-zinc-900;
+  }
 }
 
 @layer base {
