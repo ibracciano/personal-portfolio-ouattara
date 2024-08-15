@@ -8,12 +8,12 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    apiKey: "AIzaSyCybnXrS__B-pSLR7qqi5FHjZNKgXyCZ1Y",
     authDomain: "personal-portfolio-ouattara.firebaseapp.com",
     projectId: "personal-portfolio-ouattara",
     storageBucket: "personal-portfolio-ouattara.appspot.com",
     messagingSenderId: "740305889913",
-    appId: import.meta.env.VITE_FIREBASE_API_ID
+    appId: "1:740305889913:web:fc2069e4980631992882a8"
 };
 
 // Initialize Firebase

@@ -3,9 +3,13 @@ import { BsPassportFill } from "react-icons/bs";
 import { FaBlogger } from "react-icons/fa";
 import { MdAddHome, MdContacts } from "react-icons/md";
 import { RiProjectorFill } from "react-icons/ri";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const { userInfo } = useSelector((state) => state.portfolio);
+  // console.log(userInfo);
+
   const icons = [
     { path: "/", icon: <MdAddHome size={30} />, nom: "Home" },
     {
@@ -39,6 +43,15 @@ const Header = () => {
             </NavLink>
           ))}
         </ul>
+        {userInfo && (
+          <div className="absolute -top-10 lg:-top-14 w-16 h-16 bg-white left-[42%] lg:left-1 rounded-full border-4 border-cyan-500">
+            <img
+              src={userInfo.photo}
+              alt="photo"
+              className="w-full h-full rounded-full"
+            />
+          </div>
+        )}
       </nav>
     </header>
   );
