@@ -18,12 +18,19 @@ import { RiTailwindCssFill } from "react-icons/ri";
 
 const Home = () => {
   const [typeEffect] = useTypewriter({
-    words: ["Développeur Web", "Développeur React", "Développeur Front", "Dévéloppeur Back", "Développeur JS"],
+    words: [
+      "Développeur Web",
+      "Développeur React",
+      "Développeur Front",
+      "Dévéloppeur Back",
+      "Développeur JS",
+    ],
     loop: true,
     cursor: <Cursor className="text-white" />,
     delay: 1000,
     deleteSpeed: 150,
   });
+
   const languages = [
     {
       lang: "HTML",
@@ -83,7 +90,10 @@ const Home = () => {
         {/* left */}
         <div className="lg:w-[50%]">
           <h1 className="text-center text-transparent mb-7 lg:text-start font-poppins VioletToIndigo bg-clip-text">
-            Je suis Ouattara Ibrahim Yacouba <span className="text-transparent OrangeToPink bg-clip-text">{typeEffect}</span>
+            Je suis Ouattara Ibrahim Yacouba{" "}
+            <span className="text-transparent OrangeToPink bg-clip-text">
+              {typeEffect}
+            </span>
             <Cursor />
           </h1>
 

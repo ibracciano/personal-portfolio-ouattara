@@ -3,6 +3,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "../composants/Header";
 // import Footer from "../composants/Footer";
+import ProgressBar from "../utils/ProgressBar";
 
 const UserLayout = () => {
   return (
@@ -11,6 +12,7 @@ const UserLayout = () => {
         <Outlet />
       </div>
       <div>
+        <ProgressBar />
         <Header />
       </div>
     </div>
