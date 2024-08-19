@@ -7,7 +7,7 @@ import Projects from "./routes/Projects";
 import Portfolio from "./routes/Portfolio";
 import Blog from "./routes/Blog";
 import Contact from "./routes/Contact";
-import Dashboard from "./routes/admin/Dashboard";
+// import Dashboard from "./routes/admin/Dashboard";
 import AdminLayout from "./layout/AdminLayout";
 import AllPosts from "./routes/admin/AllPosts";
 import AddPost from "./routes/admin/AddPost";
@@ -28,9 +28,8 @@ const App = () => {
           path: "dashboard",
           element: <AdminLayout />,
           children: [
-            { path: "", element: <Dashboard /> },
-            { path: "all-post", element: <AllPosts /> },
             { path: "add-post", element: <AddPost /> },
+            { path: "all-post", element: <AllPosts /> },
           ],
         },
       ],
