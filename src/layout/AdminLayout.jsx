@@ -16,7 +16,7 @@ const AdminLayout = () => {
           <ul className="flex gap-5 lg:flex-col">
             <li>
               <NavLink
-                to="/dashboard/add-post"
+                to="/dashboard"
                 className={({ isActive }) =>
                   isActive
                     ? "border-b-4 border-cyan-500 px-2 py-2 bg-slate-800 flex items-center gap-2 "

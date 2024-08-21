@@ -28,7 +28,7 @@ const App = () => {
           path: "dashboard",
           element: <AdminLayout />,
           children: [
-            { path: "add-post", element: <AddPost /> },
+            { path: "", element: <AddPost /> },
             { path: "all-post", element: <AllPosts /> },
           ],
         },
