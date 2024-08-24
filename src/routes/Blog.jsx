@@ -1,6 +1,6 @@
 // import React from 'react'
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoSettings } from "react-icons/io5";
 import { auth, db, googleProvider } from "../firebaseConfig/firebase";
 import { signInWithPopup, signOut } from "firebase/auth";
@@ -8,6 +8,9 @@ import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../redux/slice";
 import { doc, getDoc, setDoc } from "firebase/firestore";
+import { getAllPosts } from "../hook/hook";
+import ProjectCard from "../composants/ProjectCard";
+import BlogCard from "../composants/BlogCard";
 
 const Blog = () => {
   const { userInfo } = useSelector((state) => state.portfolio);
@@ -78,9 +81,22 @@ const Blog = () => {
       });
   };
 
+  // projets de blog
+  const [projets, setProjets] = useState([]);
+
+  const getProject = async () => {
+    const posts = await getAllPosts();
+    setProjets(posts.filter((projet) => projet.typeOf === "blog"));
+  };
+
+  useEffect(() => {
+    getProject();
+  }, []);
+
   return (
     <main>
       <div className="relative min-h-screen">
+        {/* connexion via google et deconnexion */}
         <div
           className={`${
             open
@@ -121,6 +137,20 @@ const Blog = () => {
           >
             <IoSettings size={30} />
           </button>
+        </div>
+
+        <div className="px-20 py-10">
+          <h1 className="text-transparent OrangeToPink bg-clip-text">
+            Mes articles de blog
+          </h1>
+          <p className="mt-2 mb-5 text-gray-600">
+            Découvrez les derniers articles créés par moi.
+          </p>
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-4">
+            {projets.map((post) => (
+              <BlogCard post={post} key={post.id} />
+            ))}
+          </div>
         </div>
       </div>
     </main>
