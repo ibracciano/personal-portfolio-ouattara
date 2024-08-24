@@ -315,8 +315,8 @@ const Portfolio = () => {
 
             <button className="px-3 py-5 font-bold text-white OrangeToPink hover:VioletToIndigo">
               <a
-                href="CV de Ibrahim Yacouba Ouattara Vrai.pdf"
-                download="Cv_Ouattara.pdf"
+                href="CV_OUATTARA_IBRAHIM_STAGE.pdf"
+                download="CV_OUATTARA_IBRAHIM_STAGE.pdf"
               >
                 Télecharger mon CV
               </a>

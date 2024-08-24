@@ -1,30 +1,9 @@
 // import React from "react";
 
 import { IoEyeSharp } from "react-icons/io5";
-import { MdDelete } from "react-icons/md";
-import { RxUpdate } from "react-icons/rx";
 import { Link } from "react-router-dom";
-import { db } from "../firebaseConfig/firebase";
-import { deleteDoc, doc } from "firebase/firestore";
-import { toast } from "react-toastify";
-import { getAllPosts } from "../hook/hook";
 
 const ProjectCard = ({ post }) => {
-  // supprimer un post
-  const deletePost = async (id) => {
-    // console.log(id);
-    const docRef = doc(db, "posts", id);
-    try {
-      await deleteDoc(docRef);
-      setTimeout(() => {
-        toast.success("Post supprimé avec succès!");
-      }, 1000);
-      getAllPosts();
-    } catch (error) {
-      toast.error(error.message);
-    }
-  };
-
   //   console.log(post);
   return (
     <div className="flex flex-col items-center">
@@ -58,7 +37,9 @@ const ProjectCard = ({ post }) => {
 
         <div className="space-x-2">
           <button className="p-2 mt-5 font-bold border-2 border-orange-500 rounded-full Dark bg-cyan-500">
-            <IoEyeSharp />
+            <Link to={post.link} target="_blank">
+              <IoEyeSharp />
+            </Link>
           </button>
         </div>
       </div>
