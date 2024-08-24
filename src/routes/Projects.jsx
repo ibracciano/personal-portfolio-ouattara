@@ -19,7 +19,7 @@ const Projects = () => {
   //   console.log(projets);
 
   return (
-    <main className="px-10 py-10 bg-no-repeat bg-cover bg-pattern font-body">
+    <main className="px-10 pt-10 pb-32 bg-no-repeat bg-cover lg:pb-10 bg-pattern font-body">
       <div>
         <h1 className="text-transparent OrangeToPink bg-clip-text">
           Mes Projets
