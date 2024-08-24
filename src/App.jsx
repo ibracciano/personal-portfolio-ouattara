@@ -11,6 +11,7 @@ import Contact from "./routes/Contact";
 import AdminLayout from "./layout/AdminLayout";
 import AllPosts from "./routes/admin/AllPosts";
 import AddPost from "./routes/admin/AddPost";
+import SingleBlog from "./routes/SingleBlog";
 
 const App = () => {
   // creation des routes
@@ -24,6 +25,7 @@ const App = () => {
         { path: "resume", element: <Portfolio /> },
         { path: "blog", element: <Blog /> },
         { path: "contact", element: <Contact /> },
+        { path: "blog/:id", element: <SingleBlog /> },
         {
           path: "dashboard",
           element: <AdminLayout />,

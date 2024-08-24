@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../redux/slice";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { getAllPosts } from "../hook/hook";
-import ProjectCard from "../composants/ProjectCard";
+
 import BlogCard from "../composants/BlogCard";
 
 const Blog = () => {
